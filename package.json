@@ -1,0 +1,26 @@
+{
+  "name": "html-refactor",
+  "version": "0.0.1",
+  "description": "An automated way to rewrite your HTML.",
+  "main": "index.js",
+  "dependencies": {
+    "findit": "^2.0.0",
+    "jsdom": "^6.5.1",
+    "lodash": "^3.10.1",
+    "parse5": "^1.5.0"
+  },
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "refactoring",
+    "copy-paste"
+  ],
+  "author": "Eugene Moroz",
+  "license": "ISC"
+}
