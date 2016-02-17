@@ -1,13 +1,12 @@
 'use strict';
 
 const expect = require('chai').expect,
-    utils = require('../testUtils'),
     job = require('../../index'),
     labelRewriter = require('../../rewriters/labelRewriter')
     ;
 
 describe('rewriters/labelRewriter', function () {
-    let processedHTML;
+    var processedHTML;
 
     function saveProcessed(sourceHtml, done) {
         job.refactorFile(sourceHtml, [labelRewriter])
@@ -19,7 +18,7 @@ describe('rewriters/labelRewriter', function () {
 
     describe('when table cell has only text', function () {
         beforeEach(function (done) {
-            let html = '<form><table><tbody><tr><td>A raw text</td></tr></tbody></table></form>';
+            var html = '<form><table><tbody><tr><td>A raw text</td></tr></tbody></table></form>';
             saveProcessed(html, done);
         });
 
@@ -32,7 +31,7 @@ describe('rewriters/labelRewriter', function () {
 
     describe('when table cell has class', function () {
         beforeEach(function (done) {
-            let html = '<form><table><tbody><tr><td class="test-class">A raw text</td></tr></tbody></table></form>';
+            var html = '<form><table><tbody><tr><td class="test-class">A raw text</td></tr></tbody></table></form>';
             saveProcessed(html, done);
         });
 

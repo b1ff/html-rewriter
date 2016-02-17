@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
-const jsdom = require('jsdom').jsdom;
-const serialize = require('../../lib/documentSerializer');
+var jsdom = require('jsdom').jsdom;
+var serialize = require('../../lib/documentSerializer');
 
 describe('lib/documentSerializer', function () {
 
@@ -9,14 +9,14 @@ describe('lib/documentSerializer', function () {
     }
 
     it('should serialize simple DOM', function () {
-        const bodyContent = '<div>A test content</div>';
-        const document = documentWith(bodyContent);
+        var bodyContent = '<div>A test content</div>';
+        var document = documentWith(bodyContent);
 
         expect(serialize(document)).to.equal(bodyContent);
     });
 
     it('should exclude jsdom items', function () {
-        const document = documentWith(
+        var document = documentWith(
             'hello<script class="jsdom"></script>'
         );
 
@@ -24,7 +24,7 @@ describe('lib/documentSerializer', function () {
     });
 
     it('should preserve special symbols in attributes', function () {
-        const document = documentWith(
+        var document = documentWith(
             '<div ng-if="condition1 && condition2">A text</div>'
         );
 
@@ -32,7 +32,7 @@ describe('lib/documentSerializer', function () {
     });
 
     it('should encode text content', function () {
-        const document = documentWith(
+        var document = documentWith(
             '<div>A text condition1 && condition2</div>'
         );
 
@@ -41,7 +41,7 @@ describe('lib/documentSerializer', function () {
 
     // TODO: fix it.
     xit('should preserve templates in the text content', function () {
-        const document = documentWith(
+        var document = documentWith(
             "<div>{{condition && cs ? 'value1' : 'value2'}}</div>"
         );
 

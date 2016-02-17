@@ -1,5 +1,5 @@
 'use strict';
-let expect = require('chai').expect,
+var expect = require('chai').expect,
     GeneralRewriter = require('../../lib/GeneralRewriter');
 
 describe('lib/GeneralRewriter', function () {
@@ -9,7 +9,7 @@ describe('lib/GeneralRewriter', function () {
 
     describe('constructor', function() {
         it('compiles template', function(){
-            let r = new GeneralRewriter({
+            var r = new GeneralRewriter({
                 template: '<div>${ text }</div>'
             });
 
