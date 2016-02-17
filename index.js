@@ -1,8 +1,7 @@
 'use strict';
 const fileWriter = require('./lib/fileWriter'),
     serializeDocument = require('./lib/documentSerializer'),
-    htmlWorker = require('./lib/htmlWorker'),
-    datepickerProcessor = require('./rewriters/datepickerRewriter')
+    htmlWorker = require('./lib/htmlWorker')
     ;
 
 function updateDom(filePath, window, rewriters) {
