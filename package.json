@@ -14,7 +14,7 @@
     "mocha": "^2.3.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --ui bdd --recursive ./spec"
   },
   "keywords": [
     "html",
